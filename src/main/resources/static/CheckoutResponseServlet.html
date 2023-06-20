@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Billing Address</h2>
+
+    <div>
+        <form action="../index.html">
+            <div>
+                First name <input type="text" name="firstname" >
+            </div>
+            <br>
+            <div>
+                Last name <input type="text" name="lastname" >
+            </div>
+            <br>
+            <div>
+                Username <input type="text" name="username" placeholder="Username" >
+            </div>
+            <br>
+            <div>
+                Email (Optional) <input type="email" name="email" placeholder="hyuntak@snu.ac.kr">
+            </div>
+            <br>
+            <div>
+                Address <input type="text" name="address" placeholder="Mapo-gu, Seoul">
+            </div>
+            <br>
+            <div>
+                Address 2 (Optional) <input type="text" name="address2" placeholder="1234 Apartment">
+            </div>
+            <br>
+            <div>
+                <label for="countries">Country</label>
+    
+                <select name="countries" id="countries">
+                    <option value="choose..." selected>Choose...</option>
+                    <option value="unitedstates">United States</option>
+                    <option value="southofkorea">South of Korea</option>
+                    <option value="japan">Japan</option>
+                    <option value="china">China</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="state">State</label>
+    
+                <select name="state" id="state">
+                    <option value="choose..." selected>Choose...</option>
+                    <option value="washington,d.c.">Washington, D.C.</option>
+                    <option value="seoul">Seoul</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="beijing">Beijing</option>
+                    <option value="berlin">Berlin</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                ZIP <input type="text" name="zip" placeholder="12345">
+            </div>
+            <hr>
+            <div>
+                <input type="checkbox" name="shippingaddress"> Shipping address is the same as my biliing address
+            </div>
+            <div>
+                <input type="checkbox" name="savethisinformation"> Save this information for next time
+            </div>
+            <hr>
+
+            <h2>Payment</h2>
+            <div><input type="radio" name="payments" value="creditcard"> Credit card</div>
+            <div><input type="radio" name="payments" value="debitcard"> Debit card</div>
+            <div><input type="radio" name="payments" value="paypal"> Paypal</div>
+            <br>
+            <div>
+                Name on card <input type="text" name="nameoncard" >
+            </div>
+            <br>
+            <div>
+                Credit card number <input type="text" name="creditcard" >
+            </div>
+            <br>
+            <div>
+                Expiration <input type="date" name="expiration">
+            </div>
+            <br>
+            <div>
+                CVV <input type="text" name="cvv">
+            </div>
+            <hr>
+            <br>
+            <div>
+                <button type="submit">Continued to checkout</button>
+            </div>
+        </form>
+
+</body>
+</html>
