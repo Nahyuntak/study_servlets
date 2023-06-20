@@ -9,16 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/CheckoutResponseServlet")
-public class CheckoutResponseServlet extends HttpServlet {
-    @Override
+@WebServlet(urlPatterns = "/CheckoutFormServlet")
+public class CheckoutFormServlet extends HttpServlet {
+     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            System.out.println("CheckoutResponseServlet - doGet()");
         try {
-            String FirstName = request.getParameter("FirstName");
-            String LastName = request.getParameter("LastName");
             PrintWriter printWriter = response.getWriter();
+
             String contents = "<!DOCTYPE html>\r\n" + //
                     "<html lang=\"en\">\r\n" + //
                     "<head>\r\n" + //
@@ -31,13 +29,13 @@ public class CheckoutResponseServlet extends HttpServlet {
                     "    <h2>Billing Address</h2>\r\n" + //
                     "\r\n" + //
                     "    <div>\r\n" + //
-                    "        <form action=\"CheckoutResponseServlet\" method=\"get\">\r\n" + //
+                    "        <form action=\"CheckoutResponseServlet\">\r\n" + //
                     "            <div>\r\n" + //
-                    "                First name <input type=\"text\" name="+FirstName+" >\r\n" + // 
+                    "                First name <input type=\"text\" name=\"firstname\" >\r\n" + // 
                     "            </div>\r\n" + //
                     "            <br>\r\n" + //
                     "            <div>\r\n" + //
-                    "                Last name <input type=\"text\" name="+LastName+" >\r\n" + //
+                    "                Last name <input type=\"text\" name=\"lastname\" >\r\n" + //
                     "            </div>\r\n" + //
                     "            <br>\r\n" + //
                     "            <div>\r\n" + //
@@ -131,3 +129,4 @@ public class CheckoutResponseServlet extends HttpServlet {
         }
     }
 }
+
