@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/getRequestParamsServlet")
-public class GetRequestParamsServlet extends HttpServlet{
+public class GetRequestParamsServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest reqest, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String firstName = request.getParameter("first_name");
-            String secondName = request.getParameter("second_name");
+            String firstName = "Hyuntak";
+            String secondName = "NA";
             PrintWriter printWriter = response.getWriter();
+            // String contents = "Hyuntak NA !"; 
             String contents = "<!DOCTYPE html>\r\n" + //
                     "<html lang=\"en\">\r\n" + //
                     "<head>\r\n" + //
@@ -26,9 +27,9 @@ public class GetRequestParamsServlet extends HttpServlet{
                     "</head>\r\n" + //
                     "<body>\r\n" + //
                     "    <div>\r\n" + //
-                    "        first Name : "+firstName+" </div>\r\n" + //
+                    "        first Name : " + firstName + " </div>\r\n" + //
                     "    <div>\r\n" + //
-                    "        second Name : "+secondName+" </div>\r\n" + //
+                    "        second Name : " + secondName + " </div>\r\n" + //
                     "</body>\r\n" + //
                     "</html>";
 
