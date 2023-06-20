@@ -29,7 +29,7 @@ public class CheckoutResponseServlet extends HttpServlet {
                     "    <h2>Billing Address</h2>\r\n" + //
                     "\r\n" + //
                     "    <div>\r\n" + //
-                    "        <form action=\"../index.html\">\r\n" + //
+                    "        <form action=\"CheckoutResponseServlet\">\r\n" + //
                     "            <div>\r\n" + //
                     "                First name <input type=\"text\" name=\"firstname\" >\r\n" + // 
                     "            </div>\r\n" + //
