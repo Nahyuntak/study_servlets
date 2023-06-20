@@ -122,9 +122,6 @@ public class CheckoutResponseServlet extends HttpServlet {
                     "</body>\r\n" + //
                     "</html>";
 
-
-
-            
             printWriter.println(contents);
             printWriter.close();
         } catch (Exception e) {
