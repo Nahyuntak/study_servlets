@@ -21,13 +21,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-<<<<<<< HEAD
-	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-	implementation 'mysql:mysql-connector-java:8.0.28'
-
-=======
 implementation 'mysql:mysql-connector-java:8.0.28'
->>>>>>> d0f1e95e2184605bbaf84c3e86ac46205239e871
 }
 
 tasks.named('test') {

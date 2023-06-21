@@ -12,16 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
-@WebServlet(urlPatterns = "/connectDBServlet")
-public class ConnectDBServlet extends HttpServlet{
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-         try {
-            // - MySQL workbench 실행 : JDBC
-            // - User/password와 접속 IP:port 접속
-            String url = "jdbc:mysql://192.168.0.54:3306/db_cars";
-=======
 @WebServlet(urlPatterns = "/ConnectDBServlet")
 public class ConnectDBServlet extends HttpServlet {
     @Override
@@ -30,7 +20,6 @@ public class ConnectDBServlet extends HttpServlet {
             // - MySQL workbench 실행 : JDBC
             // - User/password와 접속 IP:port 접속
             String url = "jdbc:mysql://192.168.0.39:3306/db_cars";
->>>>>>> d0f1e95e2184605bbaf84c3e86ac46205239e871
             String user = "yojulab";
             String password = "!yojulab*";
 
@@ -49,9 +38,6 @@ public class ConnectDBServlet extends HttpServlet {
         } catch (Exception e) {
             // TODO: handle exception
         }
-<<<<<<< HEAD
-=======
         System.out.println();
->>>>>>> d0f1e95e2184605bbaf84c3e86ac46205239e871
     }
 }
