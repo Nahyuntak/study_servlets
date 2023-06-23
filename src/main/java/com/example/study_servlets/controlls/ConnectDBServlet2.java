@@ -19,7 +19,7 @@ import com.example.study_servlets.commons.Commons;
 import com.example.study_servlets.daos.FactorysDao;
 
 @WebServlet(urlPatterns = "/ConnectDBServlet")
-public class ConnectDBServlet extends HttpServlet {
+public class ConnectDBServlet2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -49,7 +49,7 @@ public class ConnectDBServlet extends HttpServlet {
             // - query Edit
             FactorysDao factorysDao = new FactorysDao();
             ArrayList factoryList = new ArrayList();
-            factoryList = factorysDao.SelectAll();
+            factoryList = factorysDao.selectAll();
             for(int i=0; i < factoryList.size(); i=i+1){
                 HashMap hashMap = new HashMap();
                 hashMap = (HashMap) factoryList.get(i);
@@ -104,5 +104,5 @@ public class ConnectDBServlet extends HttpServlet {
         }
         System.out.println();
     }
+
 }
-  

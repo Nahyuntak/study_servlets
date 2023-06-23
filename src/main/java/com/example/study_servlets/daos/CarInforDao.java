@@ -87,6 +87,21 @@ public class CarInforDao extends HttpServlet {
         carInfo2.put("COMPANY_ID", "2");
         carInforList.add(carInfo2);
 
+        HashMap<String, String> carInfo1 = new HashMap<>();
+        carInfo1.put("CAR_NAME", "Car 1");
+        carInfo1.put("YEAR", "2022");
+        carInfo1.put("CAR_INFOR_ID", "1");
+        carInfo1.put("COMPANY_ID", "1");
+        carInforList.add(carInfo1);
+
+        HashMap<String, String> carInfo2 = new HashMap<>();
+        carInfo2.put("CAR_NAME", "Car 2");
+        carInfo2.put("YEAR", "2021");
+        carInfo2.put("CAR_INFOR_ID", "2");
+        carInfo2.put("COMPANY_ID", "2");
+        carInforList.add(carInfo2);
+
+
         // DB에서 조회한 데이터를 carInforList에 추가하는 로직을 구현해야 합니다.
 
         return carInforList;
