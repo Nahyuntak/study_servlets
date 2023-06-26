@@ -20,4 +20,4 @@
         </body>
 
         </html>
-        <% System.out.println("HelloWorldJSP - doGet() done."); %>
+<% System.out.println("HelloWorldJSP - doGet() done."); %>
