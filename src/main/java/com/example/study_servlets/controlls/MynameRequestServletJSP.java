@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = "/mynameRequestServletJSP")
 public class MynameRequestServletJSP extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         try {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/myname_request.jsp");
             requestDispatcher.forward(request, response);
