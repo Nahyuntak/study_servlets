@@ -10,21 +10,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/cookies/CreateServlet")
-public class CookiesCreateServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/cookies/GetAndDeleteServlet")
+public class CookiesGetAndDeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            Cookie cookie_first = new Cookie("firstName", "Heesoo!");
-            Cookie cookie_second = new Cookie("secondName", "Han!");
+            // cookies
+            Cookie[] cookies = request.getCookies();
+            String content = "<div>CookiesGetAndDeleteServlet</div>";
+            for (Cookie cookie : cookies) {
+                String name = cookie.getName();
+                String value = cookie.getValue();
+                if (name.equals("secondName")) {             // 쿠키 삭제
+                    cookie.setMaxAge(0);
+                    response.addCookie(cookie);
+                } else {         // 출력
+                    content = content + "<div>" + name + ", " + value + "</div>";
+                }
 
-            response.addCookie(cookie_first);
-            response.addCookie(cookie_second);
+            }
 
             // display
             PrintWriter printWriter = response.getWriter();
-            String content = "<div>CreateCookieServlets</div>";
             printWriter.println(content);
             printWriter.close();
 

@@ -17,17 +17,15 @@ public class SessionDeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            // expired session
             HttpSession httpSession = request.getSession();
-            httpSession.invalidate();
+            httpSession.invalidate();    // Server side
 
             // delete cookies
             Cookie[] cookies = request.getCookies();
-            String content = "<div>CookiesGetAndDeleteServlet</div>";
             for (Cookie cookie : cookies) {
                 String name = cookie.getName();
                 String value = cookie.getValue();
-                if (name.equals("JSESSIONID")) { // 쿠키 삭제 --Client side
+                if (name.equals("JSESSIONID")) { // 쿠키 삭제 -> Client side
                     cookie.setMaxAge(0);
                     response.addCookie(cookie);
                 }

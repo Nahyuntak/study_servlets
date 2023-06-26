@@ -16,8 +16,13 @@ public class HelloWorldServlet extends HttpServlet {
         System.out.println("HelloWorldServlet - doGet()");
         try {
             response.setContentType("text/html;charset=UTF-8");
+<<<<<<< HEAD
             // String firstName = "yoju";
             // String secondName = "Lab";
+=======
+            String firstName = "yoju";
+            String secondName = "Lab";
+>>>>>>> 6a22631b7256164ddecc811bd69122c1d85738e0
             PrintWriter printWriter = response.getWriter();
             String contents = "Yoju Lab !";
             // String contents = "<!DOCTYPE html>\r\n" + //

@@ -20,8 +20,9 @@ public class SessionFilter implements Filter {
             System.out.println(request.getRemoteHost());
             System.out.println(request.getRemoteAddr());
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/helloworldServlet");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/helloWorldServlet");
             requestDispatcher.forward(request, response);
+            // chain.doFilter(request, response);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

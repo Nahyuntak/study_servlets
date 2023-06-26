@@ -16,7 +16,7 @@ public class HelloWorldJSPServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             String contents = "Yoju Lab !";
-            
+
             request.setAttribute("contents", contents);
             // 다음 파일 호출
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/helloworldJSP.jsp");

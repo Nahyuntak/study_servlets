@@ -18,9 +18,9 @@ public class OptionInforsDeleteServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             String unique_id = request.getParameter("unique_id");
-            
+
             OptionInforsDao optionInforsDao = new OptionInforsDao();
-            int count = optionInforsDao.DeleteWithUniqueID(unique_id);
+            int count = OptionInforsDao.DeleteWithUniqueID(unique_id);
 
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter printWriter = response.getWriter();
