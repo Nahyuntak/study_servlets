@@ -10,13 +10,28 @@
         </head>
 
         <body>
-            <% String contents=(String)request.getAttribute("contents"); %>
+            <% String usernameSession=(String)session.getAttribute("username"); %>
                 <div>
-                    HTML Value : Yoju Lab !
+                    User Name : <%= usernameSession %>
                 </div>
                 <div>
-                    Code Value : <%= contents %>
+                    Login Status :
+                    <form action="">
+                        <% if(usernameSession == null) { %>
+                            <button type="submit" formaction="/session/CreateServlet?username=yojulab&password=1234"
+                                method="get"> Login </button>
+                            <% } else { %>
+                                <button type="submit" formaction="/session/DeleteServlet">Logout</button>
+                                <% } %>
+                    </form>
                 </div>
+                <% String contents=(String)request.getAttribute("contents"); %>
+                    <div>
+                        HTML Value : Yoju Lab !
+                    </div>
+                    <div>
+                        Code Value : <%= contents %>
+                    </div>
         </body>
 
         </html>
