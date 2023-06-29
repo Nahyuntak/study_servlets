@@ -6,15 +6,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-// import java.util.UUID;
+import java.util.UUID;
 
 public class Commons {
-    // public String generateUUID() { // 유니크아이디 생성
-    //     return UUID.randomUUID().toString(); // 리턴타입 스트링으로 변경
-    // }
+    public String generateUUID() { // 유니크아이디 생성
+        return UUID.randomUUID().toString(); // 리턴타입 스트링으로 변경
+    }
 
     public Statement getStatement() {
-        String url = "jdbc:mysql://192.168.0.39:3306/db_cars";
+        String url = "jdbc:mysql://192.168.0.39:3306/db_survey";
         String user = "yojulab";
         String password = "!yojulab*";
 
