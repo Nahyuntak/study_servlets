@@ -12,11 +12,12 @@
 
         <body>
             <div class="container">
-                <% String search=(String) request.getAttribute("search"); %>
+                <% String search=(String)request.getAttribute("search"); %>
                     <form action="/optionInforsServlet">
                         <label>검색
                             <input type="text" name="search" value="<%= search %>">
                         </label>
+                        <input type="text" name="search" value="<%= search %>">
                         <button>검색 하기</button>
                     </form>
             </div>
@@ -38,8 +39,8 @@
                                     optionInforRecord = (HashMap) optionInforList.get(i);
                                     %>
                                     <form>
-                                        <input type="hidden" name="unique_id" value="<%= optionInforRecord.get("OPTION_INFOR_ID") %>">
-
+                                        <input type="hidden" name="unique_id" value="<%= optionInforRecord.get("
+                                            OPTION_INFOR_ID") %>">
                                         <tr>
                                             <td>
                                                 <%= optionInforRecord.get("OPTION_INFOR_ID") %>

@@ -2,8 +2,6 @@ package com.example.study_servlets.controlls;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -14,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.study_servlets.commons.Commons;
 import com.example.study_servlets.daos.OptionInforsDao;
 
 @WebServlet(urlPatterns = "/optionInforsJSPServlet")
@@ -34,7 +31,6 @@ public class OptionInforsJSPServlet extends HttpServlet {
 
             // getWriter 전에 charset 하기
             response.setContentType("text/html;charset=UTF-8");
-
             // 다음 파일 호출
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/cars/option_infors.jsp");
             requestDispatcher.forward(request, response);

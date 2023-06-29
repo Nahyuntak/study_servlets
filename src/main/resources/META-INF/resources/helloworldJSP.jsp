@@ -17,11 +17,11 @@
                 <div>
                     Login Status :
                     <form action="">
-                        <% if(usernameSession == null) { %>
-                            <button type="submit" formaction="/session/CreateServlet?username=yojulab&password=1234"
-                                method="get"> Login </button>
+                        <% if(usernameSession==null) { %>
+                            <button type="submit"
+                                formaction="/session/CreateServlet?username=yojulab&password=1234">Login</button>
                             <% } else { %>
-                                <button type="submit" formaction="/session/DeleteServlet">Logout</button>
+                                <button type="submit">Logout</button>
                                 <% } %>
                     </form>
                 </div>
